@@ -96,6 +96,9 @@ public class AutorEditorialServiceImp implements IAutorEditorialService{
 	public List<AutorEditorial> autorPorEditorial(int idEditorial) {
 		// TODO Auto-generated method stub
 		List<AutorEditorial> lista = repo.findByEditorial_Id(idEditorial);
+		for(AutorEditorial l: lista) {
+			l.setEditorial(null);
+		};
 		return lista;
 	}
 
