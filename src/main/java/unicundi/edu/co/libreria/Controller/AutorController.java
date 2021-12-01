@@ -30,7 +30,7 @@ import unicundi.edu.co.libreria.Service.IAutorService;
 
 @RestController
 @RequestMapping("/autores")
-@PreAuthorize("hasAuthority('Administrador')")
+//@PreAuthorize("hasAuthority('Administrador')")
 public class AutorController {
 
 	@Autowired
