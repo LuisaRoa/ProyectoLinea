@@ -52,7 +52,7 @@ public class UsuarioController {
 	@PostMapping(value = "/insertar", consumes = "application/json")
 	public ResponseEntity<?> guardar(@Valid @RequestBody Usuario usuario) throws ConflictException, ArgumentRequiredException, ModelNotFoundException {
 		service.guardar(usuario);
-		return new ResponseEntity<Object>(HttpStatus.CREATED);
+		return new ResponseEntity<Object>(HttpStatus.CREATED)
 	}
 	
 	
