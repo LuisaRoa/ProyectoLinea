@@ -88,7 +88,10 @@ public class AutorEditorialServiceImp implements IAutorEditorialService{
 	public List<AutorEditorial> editorialPorAutor(int idAutor) {
 		// TODO Auto-generated method stub
 		List<AutorEditorial> lista = repo.findByAutor_Id(idAutor);
-		
+		for(AutorEditorial l: lista) {
+			l.setAutor(null);
+			l.setFecha(null);
+		};
 		return lista;
 	}
 
@@ -98,6 +101,7 @@ public class AutorEditorialServiceImp implements IAutorEditorialService{
 		List<AutorEditorial> lista = repo.findByEditorial_Id(idEditorial);
 		for(AutorEditorial l: lista) {
 			l.setEditorial(null);
+			l.setFecha(null);
 		};
 		return lista;
 	}
