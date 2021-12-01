@@ -53,9 +53,13 @@ public class AutorEditorialServiceImp implements IAutorEditorialService{
 			throws ConflictException, ArgumentRequiredException, ModelNotFoundException {
 		// TODO Auto-generated method stub
 		if(repoA.findById(obj.getAutor().getId()).isPresent()) {
+			
+		}else {
 			throw new ModelNotFoundException("Autor no encontrado");
 		}
-		if(repoE.findById(obj.getAutor().getId()).isPresent()) {
+		if(repoE.findById(obj.getEditorial().getId()).isPresent()) {
+			
+		}else {
 			throw new ModelNotFoundException("Editorial no encontrada");
 		}
 		this.repo.guardarNativo(obj.getAutor().getId(), obj.getEditorial().getId(), obj.getFecha());
